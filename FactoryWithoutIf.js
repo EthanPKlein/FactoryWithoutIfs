@@ -12,12 +12,14 @@ function Teacher() {
 
 // probably not ideal since Student and Teacher will get made even when not used
 function Factory() {
+	
+	var self = this;
 
     this.student = new Student();
     this.teacher = new Teacher();
 
     this.create = function(type) {
-        return this[type];
+        return self[type];
     }
 }
 
